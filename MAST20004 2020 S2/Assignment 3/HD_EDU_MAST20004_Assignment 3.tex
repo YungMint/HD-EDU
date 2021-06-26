@@ -1,0 +1,330 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usetheme{AnnArbor}
+\usecolortheme{default}
+\usepackage{mathtools}
+
+%Intro
+
+
+\title{MAST20004 Probability}
+\subtitle{Assignment 3}
+\author{Jiacheng Min (Mint)}
+\institute{HD Education}
+\date{\today}
+
+
+
+\begin{document}
+
+% Quote Intro
+
+\frame{\titlepage}
+
+% Content
+
+%----------------------------------------------------------------------------
+\begin{frame}{Review:  Bivariate  Normal Distribution}
+
+\begin{block}{Recall: pdf}
+\[
+f(x,y)=\frac{\exp \left\{ -\frac 1{2(1-\rho ^2)}\left[ \left( \frac{x-\mu _x%
+}{\sigma _x}\right) ^2-2\rho \left( \frac{x-\mu _x}{\sigma _x}\right) \left( 
+\frac{y-\mu _y}{\sigma _y}\right) +\left( \frac{y-\mu _y}{\sigma _y}\right)
+^2\right] \right\} }{2\pi \sigma _x\sigma _y\sqrt{1-\rho ^2}} 
+\]
+\end{block}
+
+\begin{block}{Recall: Bivariate Standard Normal Distribution pdf}
+\[
+f(x,y)=\frac{\exp \left\{ -\frac 1{2(1-\rho ^2)}\left[ {x
+} ^2-2\rho {x}{y} +{y}
+^2\right] \right\} }{2\pi\sqrt{1-\rho ^2}} 
+\]
+NOTE: $X \sim \mathcal{N}(0,1)$ and $Y \sim \mathcal{N}(0,1)$
+\end{block}
+\end{frame}
+%----------------------------------------------------------------------------
+
+\begin{frame}{Review: Uncorrelated and Independent}
+\begin{block}{Theroem: General Case}
+    $Cov(X, Y) = 0$ \Rightarrow Uncorrelated \nRightarrow Independent
+    \\$ Independent \Rightarrow Uncorrelated \Rightarrow \ Cov(X, Y) = 0$
+\end{block}
+
+This case: \alert{ONLY} $X \sim \mathcal{N}(\mu,\sigma ^2)$ and $Y \sim \mathcal{N}(\mu,\sigma ^2)$ combine as a bivariate normal distribution,  $Cov(X, Y) = 0$ \Rightarrow Uncorrelated \alert{\Rightarrow Independent}
+\\See this in Assignment Q3 (i)
+\end{frame}
+%----------------------------------------------------------------------------
+
+\begin{frame}{Reivew: Conditional Brivariate Normal Distribution}
+    We only consider how to find conditional probability
+\begin{block}{Method 1}
+    $(X|Y = y) \sim \mathcal{N}(\rho y, 1 - \rho ^2)$
+    \\ Standardise twice
+\end{block}
+\begin{block}{Method 2}
+    $(X|Y = y) \sim \mathcal{N}(\mu_x + \rho \sigma_x \frac{y-\mu_y}{\sigma_y}, \sigma_x ^2 (1-\rho ^2)$)
+    \\1) Input all expectation, variance and correlation.
+    \\2) Standardise once
+\end{block}
+\end{frame}
+\begin{frame}{Review: Covariance and Correlation}
+\begin{block}{Recall:}
+If independent:
+    \\$E(X+Y) = E(X) + E(Y)$
+    \\$V(X+Y) = V(X) + V(Y)$
+    \\General case:
+    \\$V(X+Y) = V(X) + V(Y) + Cov(X, Y)$
+\end{block}
+
+\begin{block}{Correlation \rho}
+    $\rho = \frac{Cov(X, Y)}{\sqrt{V(X)V(Y)}} $
+\end{block}
+    
+\end{frame}
+
+%----------------------------------------------------------------------------
+\begin{frame}{Assignment Q3 (i)}
+\end{frame}
+%----------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q3 (ii)}
+\end{frame}
+%----------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q3 (iii)}{Hint: Normal +/- Normal = Normal}
+\end{frame}
+%----------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q3 (iv)}
+\end{frame}
+%---------------------------------------------------------------------------
+
+\begin{frame}{Review: Joint pdf, Joint Cdf And Marginal Pdf}
+\begin{block}{From joint pdf to joint cdf}
+    $$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y)dxdy = F(x,y) $$
+\end{block}
+\begin{block}{From joint cdf to joint pdf}
+    $$\frac{\partial ^2}{\partial x \partial y}F(x,y) = f(x,y)$$ 
+\end{block}
+\begin{block}{From joint pdf to marginal pdf}
+    $$\int_{-\infty}^{\infty} f(x,y)\alert{dx} = \alert{f(y)}$$
+    $$\int_{-\infty}^{\infty} f(x,y)\alert{dy} = \alert{f(x)}$$
+\end{block}
+\end{frame}
+%---------------------------------------------------------------------------
+
+\begin{frame}{Review: Conditional joint pdf}
+\begin{block}{from marginal pdf to conditional pdf}
+    $$f(x|y) = \frac{f(x,y)}{f(y)}$$
+    $$f(y|x) = \frac{f(x,y)}{f(x)}$$
+\end{block}
+\begin{block}{Independence}
+    If X, Y independent:
+    $$ \Rightarrow f(x,y) = f(x)f(y)$$
+    $$ \Rightarrow f(x) = f(x|y)$$
+    $$ \Rightarrow f(y) = f(y|x)$$
+\end{block}
+\end{frame}
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q2 (i)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q2 (ii)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q2 (iii)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q2 (iv)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q1 (i)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q1 (ii)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q1 (iii)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q1 (iv)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Review: How to Find Shadow Area}
+Basic Example: 
+\begin{cases}
+     & 0 < x < 1 \\
+     & |y| < x
+\end{cases}
+    
+\end{frame}
+
+\begin{frame}{Assignment Q4 (i)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q4 (ii)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q4 (iii)}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Introduction to $min()$ and $max()$ function}
+    
+    \begin{block}{$min(X, Y)$ function}
+    Z = min(X,Y)=
+        \begin{cases}
+            & X , \ X<Y\\
+            & Y , \ X>Y
+        \end{cases}
+    \\ \alert{ $\mathcal{P}(Z > z) = \mathcal{P}(X > x)\mathcal{P}(Y > y)$  if X, Y independent}
+    \end{block}
+    \begin{block}{$max(X, Y)$ function}
+    Z = max(X,Y)=
+        \begin{cases}
+            & X , \ X>Y\\
+            & Y , \ X<Y
+        \end{cases}
+    \\ \alert{ $\mathcal{P}(Z \leq z) = \mathcal{P}(X \leq x)\mathcal{P}(Y \leq y)$  if X, Y independent}    
+    \end{block}
+Let's try question 5...
+\end{frame}
+%---------------------------------------------------------------------------
+\begin{frame}{Assignment Q5 (i)}
+    
+\end{frame}
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q5 (ii) Method 1}
+    
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}{Assignment Q5 (ii) Method 2}
+    
+\end{frame}
+
+%------------------------------------------------------------------
+
+\begin{frame}{Further Knowledge: Mixed Distribution of $min(X,M)$}
+    Assumption: X is a non-negative random variable and M is a positive constant.
+    \begin{block}{$min(X, M)$ expression}
+    $Y = min(X,M)=$
+        \begin{cases}
+            & X , \ X \leq M\\
+            & M , \ X>M
+        \end{cases}
+    
+    \end{block}
+    \begin{block}{$min(X, Y)$ cdf and pdf}
+    F_Y(x) = 
+    \begin{cases}
+            & F_X(x) , \ x<M\\
+            & 1 , \ x \geq M
+        \end{cases}
+    ,\ f_Y(x) = 
+    \begin{cases}
+            & f_X(x) , \ x<M\\
+            & 1 - F_X(M) , \ x = M
+        \end{cases}
+    \end{block}
+    \begin{block}{$min(X, Y)$ higher moments}
+    \mathcal{E}$(Y^n) = \int_{0}^{M}x^nf_X(x)dx + M^n[1-F_X(M)] = n \int_{0}^{M}x^{n-1}[1-F_X(x)]dx$ 
+    \end{block}
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Further Knowledge: Mixed Distribution of $max(0, X-M)$}
+    Assumption: X is a non-negative random variable and M is a positive constant.
+    \begin{block}{$max(0, X-M)$ expression}
+    $Z = min(X,M)=$
+        \begin{cases}
+            & 0 , \ X \leq M\\
+            & X-M , \ X>M
+        \end{cases}
+    \end{block}
+    \begin{block}{$max(0, X-M)$ cdf and pdf}
+    F_Z(x) = 
+    \begin{cases}
+            & F_X (x) , \ x = 0\\
+            & F_X (x+M), \ x > 0
+        \end{cases}
+    ,\ f_Z(x) = 
+    \begin{cases}
+            & F_X (x) , \ x = 0\\
+            & f_X (x+M), \ x > 0
+        \end{cases}
+    \end{block}
+    \begin{block}{$min(X, Y)$ higher moments}
+    \mathcal{E}$(Z^n) = \int_{0}^{M}x^nf_X(M+x)dx =  \int_{M}^{\infty}(x-M)^{n-1}[1-F_X(x)]dx$ 
+    \end{block}
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Question: Double Integral}
+    Assignment 3 Q3 Sem 1 2020:\\
+    f(x,y) =
+    \begin{cases}
+        & c(x+y) ,\ 0 < x < 1, -x < y < x\\
+        & 0, \ ohterwise 
+    \end{cases}
+    \\
+    \\(a) Find the constant $c$
+    \\(b) Find marginal pdf of $X$
+    \\(c) Find the conditional pdf of $Y$ given $X = x$
+    \\(d) Are $X$ and $Y$ independent?
+    \\(e) Calculate $\mathcal{P}(X \geq \frac{1}{2} | Y \leq 0)$
+    \\(f) Calculate $\mathcal{P}(X^2 < Y)$
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Answer (a)}
+    
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Answer (b)}
+    
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Answer (c)}
+    
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Answer (d)}
+    
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Answer (e)}
+    
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Example Answer (f)}
+    
+\end{frame}
+%------------------------------------------------------------------
+\end{document}
+
+
